@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>证件照处理小工具</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="resources/common/css/bootstrap.min.css">
+    <script>
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
+    <script src="resources/common/js/jquery-3.4.1.min.js"></script>
+    <script src="resources/common/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h4>请将需要处理的图片拖入下方</h4>
+                    </div>
+                    <div id="image-display" class="card-body" style="height: 300px;">
+                        <img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group col-md">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">尺寸设置</span>
+                </div>
+                <select class="form-control" id="size-catalog">
+                    <option>自定义尺寸</option>
+                </select>
+            </div>
+            <div class="col-md" id="div-select-size" hidden="hidden">
+                <select class="form-control" id="size-item">
+                </select>
+            </div>
+            <div class="col-md" id="div-input-size">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">宽：</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入宽度" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">长：</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入长度" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="resources/index/index.js">
+    </script>
+</body>
+
+</html>

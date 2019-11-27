@@ -1,0 +1,16 @@
+{
+  "name": "photo-converter",
+  "version": "1.0.0",
+  "description": "证件照处理工具",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "wangchengxin",
+  "devDependencies": {
+    "electron": "^7.1.2",
+    "file-type": "^12.4.0",
+    "jimp": "^0.9.3"
+  }
+}

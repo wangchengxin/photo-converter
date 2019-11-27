@@ -1,0 +1,64 @@
+[
+    {
+        "id":0,
+        "catalog": "常用尺寸",
+        "item": [
+            {
+                "name": "一寸",
+                "width": 295,
+                "height": 413
+            },
+            {
+                "name": "小二寸",
+                "width": 413,
+                "height": 531
+            },
+            {
+                "name": "二寸",
+                "width": 413,
+                "height": 579
+            },
+            {
+                "name": "五寸",
+                "width": 1050,
+                "height": 1500
+            },
+            {
+                "name": "淘宝",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "name": "拼多多",
+                "width": 750,
+                "height": 352
+            }
+        ]
+    },
+    {
+        "id":1,
+        "catalog": "考试证件",
+        "item": [
+            {
+                "name": "社保/身份证",
+                "width": 358,
+                "height": 441
+            },
+            {
+                "name": "四六级/计算机",
+                "width": 144,
+                "height": 192
+            },
+            {
+                "name": "卫生机构",
+                "width": 160,
+                "height": 210
+            },
+            {
+                "name": "毕业证",
+                "width": 480,
+                "height": 640
+            }
+        ]
+    }
+]
