@@ -25,38 +25,57 @@
                     <div class="card-header">
                         <h4>请将需要处理的图片拖入下方</h4>
                     </div>
-                    <div id="image-display" class="card-body" style="height: 300px;">
+                    <div id="image-display" class="card-body" style="height: 100px;width: 20px;">
                         <img>
+                    </div>
+                    <div class="card-footer">
+                        <div class="input-group col-md">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">图片格式：</span>
+                            </div>
+                            <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group col-md">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">图片大小：</span>
+                            </div>
+                            <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group col-md">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">图片尺寸：</span>
+                            </div>
+                            <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="input-group col-md">
+            <div class="input-group col-md-6">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">尺寸设置</span>
                 </div>
                 <select class="form-control" id="size-catalog">
-                    <option>自定义尺寸</option>
+                    <option value=“0”>自定义尺寸</option>
+                    <option value="1">常用尺寸</option>
                 </select>
             </div>
-            <div class="col-md" id="div-select-size" hidden="hidden">
+            <div class="col-md-6" id="div-select-size">
                 <select class="form-control" id="size-item">
                 </select>
             </div>
-            <div class="col-md" id="div-input-size">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">宽：</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="请输入宽度" aria-describedby="basic-addon1">
+            <div class="input-group col-md-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">宽：</span>
                 </div>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">长：</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="请输入长度" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="请输入宽度" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group col-md">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">长：</span>
                 </div>
+                <input type="text" class="form-control" placeholder="请输入长度" aria-describedby="basic-addon1">
             </div>
         </div>
     </div>

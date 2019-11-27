@@ -21,20 +21,21 @@ document.addEventListener('dragover', (e) => {
 
 //填充下拉列表
 $.getJSON("resources/images/image-size.json", function (data) {
-  var sizeCatalog = $("#size-catalog");
+  var itemCatalog = $("#size-item");
   $.each(data, function (infoIndex, info) {
     //主题分类
-    var catalogSelect = document.createElement("option");
-    catalogSelect.innerText = info['catalog'];
-    catalogSelect.setAttribute('item-id', info['id']);
-    sizeCatalog.append(catalogSelect);
+    var itemSelect = document.createElement("option");
+    var name = info['name'];
+    var width = info['width'];
+    var height = info['height'];
+    itemSelect.innerText = name + '-' + width + "*" + height;
+    itemSelect.setAttribute('width', width);
+    itemSelect.setAttribute('height', width);
+    itemCatalog.append(itemSelect);
   });
 });
 
 //首选项选择触发事件
 $('#size-catalog').on("change", function () {
   var itemId = $(this).find('option:selected').attr('item-id');
-  //填充内容
-  $.getJSON("resources/images/image-size.json", function (data) {
-  });
 });
