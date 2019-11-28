@@ -1,5 +1,5 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
-const { fs } = require('fs')
+const { app, BrowserWindow, ipcMain, dialog } = require('electron')
+const Jimp = require('jimp')
 
 // 保持对window对象的全局引用，如果不这么做的话，当JavaScript对象被
 // 垃圾回收的时候，window对象将会自动的关闭
@@ -17,9 +17,6 @@ function createWindow() {
 
   // 加载index.html文件
   win.loadFile('index.html')
-
-  // 打开开发者工具
-  win.webContents.openDevTools()
 
 
   // 当 window 被关闭，这个事件会被触发。
@@ -56,7 +53,19 @@ app.on('activate', () => {
 // 在这个文件中，你可以续写应用剩下主进程代码。
 // 也可以拆分成几个文件，然后用 require 导入。
 
-//拖放处理
-ipcMain.on('ondropstart', (event, filePath) => {
-  console.log(filePath);
-})
+//点击照片生成逻辑
+ipcMain.on('startGenerate', function (event, imagePath, imageFormat, isCompress, width, height) {
+  var savePath = dialog.showOpenDialogSync({ properties: ['openDirectory'] })[0];
+  var saveLocation = savePath + "/证件照." + imageFormat;
+  //图片格式和尺寸处理
+  Jimp.read(imagePath, (err, lenna) => {
+    if (err) throw err;
+    lenna.resize(Number.parseInt(width), Number.parseInt(height)); // resize
+    //是否压缩
+    if (isCompress == 1) {
+      lenna.quality(0);
+    }
+    lenna.write(saveLocation); // save
+  });
+  dialog.showMessageBox({ message: '恭喜您，制作完成！' });
+});

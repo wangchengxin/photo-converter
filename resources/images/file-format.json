@@ -1,0 +1,18 @@
+[
+    {
+        "name": "jpeg",
+        "value":"jpeg"
+    },
+    {
+        "name": "jpg",
+        "value":"jpg"
+    },
+    {
+        "name": "png",
+        "value":"png"
+    },
+    {
+        "name": "bmp",
+        "value":"bmp"
+    }
+]
