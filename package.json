@@ -5,14 +5,24 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win --x64"
   },
   "author": "wangchengxin",
   "devDependencies": {
     "electron": "^7.1.2",
+    "electron-builder": "^21.2.0",
     "file-type": "^12.4.0",
     "image-size": "^0.8.3",
     "jimp": "^0.9.3",
     "read-chunk": "^3.2.0"
+  },
+  "build": {
+    "productName": "photo-converter",
+    "appId": "photo-converter",
+    "win": {
+      "target": "portable"
+    }
   }
 }
