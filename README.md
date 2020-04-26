@@ -1,2 +1,2 @@
-# photo-converter
-Simple photo converter developed by Electron
+# 证件照处理工具
+通过electron创建的证件照处理工具，支持JPG、PNG、JPEG等主流格式，并且可以选择主流证件照尺寸，也可以自定义尺寸。
