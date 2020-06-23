@@ -42,7 +42,7 @@ document.addEventListener('dragover', (e) => {
 });
 
 //填充尺寸下拉列表
-$.getJSON("resources/images/image-size.json", function (data) {
+$.getJSON("resources/image-properties/image-size.json", function (data) {
   var itemTop = $("#size-item");
   $.each(data, function (infoIndex, info) {
     //主题分类
@@ -58,7 +58,7 @@ $.getJSON("resources/images/image-size.json", function (data) {
 });
 
 //填充文件格式下拉列表
-$.getJSON("resources/images/file-format.json", function (data) {
+$.getJSON("resources/image-properties/file-format.json", function (data) {
   var itemTop = $("#image-format");
   $.each(data, function (infoIndex, info) {
     //主题分类
